@@ -801,6 +801,9 @@
             {% endfor %}
         </AllowedScopes>
         {% endif %}
+        {% if oauth.client_id_validation_regex is defined %}
+        <ClientIdValidationRegex>{{oauth.client_id_validation_regex}}</ClientIdValidationRegex>
+        {% endif %}
     </OAuth>
 
     <MultifactorAuthentication>
